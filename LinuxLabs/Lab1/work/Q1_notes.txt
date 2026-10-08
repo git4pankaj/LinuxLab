@@ -1,0 +1,99 @@
+Question  1
+ 
+Create  a  LabFiles  directory  and  perform  create/copy/move/rename/delete  operations  using  touch,  cp,  
+mv,
+ 
+rm,
+ 
+unlink,
+ 
+ls,
+ 
+stat.
+ 
+Step  1  –  Create  the  LabFiles  directory  
+Commands  used:  mkdir  Labfiles,  ls,  pwd.  
+We  created  the  Labfiles  directory  inside  Project1.  ls  confirmed  it  was  created,  and  pwd  showed  the  current  location.  
+ 
+ 
+
+
+Step  2  –  Create  the  first  file  
+Commands  used:  cd  LabFiles,  touch  Files.txt,  ls.  
+We  entered  Labfiles  and  used  touch  to  create  files1.txt.  ls  confirmed  the  file  was  present.  
+ 
+ 
+
+
+Step  3  –  Copy  the  file  
+Commands  used:  cp  File1.txt  File2.txt,  ls.  
+We  copied  files1.txt  to  create  files2.txt.  ls  confirmed  both  files  were  present.  
+ 
+ 
+
+
+Step  4  –  Create  another  file  and  check  Backup  
+Commands  used:  touch  File3.txt,  ls,  ls  Backup/.  
+We  created  file3.txt,  listed  the  Labfiles  contents,  and  checked  the  Backup  directory.  
+ 
+ 
+
+
+Step  5  –  Rename  the  copied  file  
+Command  used:  mv  File2.txt  file2.txt.  
+We  renamed  files2.txt  to  file2.txt  using  mv  and  confirmed  the  renamed  file  with  ls.  
+ 
+ 
+
+
+Step  6  –  Display  file  information  
+Command  used:  stat  File.txt.  
+We  used  stat  to  display  detailed  information  about  files1.txt,  including  permissions,  owner,  inode,  size,  and  
+timestamps.
+ 
+ 
+ 
+
+
+Step  7  –  Delete  the  file  
+Commands  used:  ls,  rm  File1.txt,  ls.  
+We  deleted  files1.txt  using  rm  and  used  ls  to  confirm  it  was  removed.  
+ 
+Note:
+ 
+The
+ 
+supplied
+ 
+screenshots
+ 
+do
+ 
+not
+ 
+show
+ 
+an
+ 
+unlink
+ 
+command
+ 
+being
+ 
+executed,
+ 
+so
+ 
+it
+ 
+is
+ 
+not
+ 
+claimed
+ 
+as
+ 
+evidence.
+ 

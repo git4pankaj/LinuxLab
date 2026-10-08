@@ -1,0 +1,111 @@
+Question  7   
+Generate  a  system/directory  report  using  find,  du,  df,  stat,  wc,  sort,  head,  tail,  uname,  hostname,  history,   
+free,
+ 
+ps,
+ 
+top
+ 
+with
+ 
+screenshots
+ 
+and
+ 
+summary.
+ 
+ 
+Step  1  –  Count  files  in  the  College  hierarchy   
+Commands  used:  find  College  -type  f  |  wc  -l  >>  system_report.txt.   
+We  counted  all  files  inside  the  College  hierarchy  and  appended  the  resulting  count  to  system_report.txt.
+
+ 
+Step  2  –  Count  directories  in  the  College  hierarchy   
+Commands  used:  find  College  -type  d  |  wc  -l  >>  system_report.txt.   
+We  counted  all  directories  inside  the  College  hierarchy  and  appended  the  resulting  count  to  system_report.txt.
+
+
+ 
+Step  3  –  Check  College  directory  disk  usage   
+Commands  used:  du  -sh  College  >>  system_report.txt,  tail  -n  1  system_report.txt.   
+We  calculated  the  total  human-readable  disk  usage  of  the  College  directory  and  appended  the  result  to  the  report.
+
+
+ 
+Step  4  –  Check  filesystem  capacity   
+Commands  used:  df  -h  .  >>  system_report.txt,  tail  -n  2  system_report.txt.   
+We  displayed  the  filesystem  capacity  for  the  current  mount  in  human-readable  form  and  appended  the  result  to  the   
+report.
+ 
+
+
+ 
+Step  5  –  Find  text  files   
+Commands  used:  find  College  -name  "*.txt"  >>  system_report.txt,  tail  -n  5  system_report.txt.   
+We  searched  the  College  hierarchy  for  .txt  files  and  appended  the  matching  paths  to  the  report.
+
+
+ 
+Step  6  –  Display  College  metadata   
+Commands  used:  stat  College  >>  system_report.txt,  tail  -n  12  system_report.txt.   
+We  collected  metadata  for  the  top-level  College  directory,  including  permissions,  timestamps,  size  and  inode  information.
+
+
+ 
+Step  7  –  Rank  the  largest  College  entries   
+Commands  used:  du  -ah  College  |  sort  -rh  |  head  -10  >>  system_report.txt.   
+We  calculated  sizes  for  entries  in  College,  sorted  them  in  reverse  human-readable  order  and  recorded  the  ten  largest   
+entries.
+ 
+
+
+ 
+Step  8  –  Collect  system  information   
+Commands  used:  uname  -a  >>  system_report.txt.   
+We  recorded  kernel,  operating-system  and  architecture  information  in  the  report.  
+
+
+ 
+Step  9  –  Display  the  hostname   
+Commands  used:  hostname  >>  system_report.txt.   
+We  recorded  the  machine  hostname  in  the  consolidated  report.  
+
+
+ 
+Step  10  –  Record  recent  shell  history   
+Commands  used:  history  |  tail  -10  >>  system_report.txt.   
+We  appended  the  ten  most  recent  shell  commands  from  the  current  session  to  the  report.  
+
+
+ 
+Step  11  –  Check  memory  and  swap  usage   
+Commands  used:  free  -h  >>  system_report.txt.   
+We  recorded  current  memory  and  swap  usage  in  human-readable  form.  
+
+
+ 
+Step  12  –  Display  running  processes   
+Commands  used:  ps  -ef  |  head  -10  >>  system_report.txt.   
+We  recorded  a  snapshot  of  the  first  ten  running  processes  in  the  report.  
+
+
+ 
+Step  13  –  Display  the  completed  system  report   
+Commands  used:  cat  system_report.txt.   
+We  displayed  the  completed  consolidated  report.  The  output  was  longer  than  one  terminal  screen,  so  the  final  evidence  is   
+shown
+ 
+across
+ 
+two
+ 
+screenshots.
+ 
+
+
+ 
+Step  14  –  Display  the  completed  system  report  (continued)   
+Continuation  of  the  final  system_report.txt  output.  
+
+
+ 

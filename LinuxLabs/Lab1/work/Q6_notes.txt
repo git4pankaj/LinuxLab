@@ -1,0 +1,74 @@
+Question  6   
+Create  and  manage  users/groups:  useradd,  adduser,  passwd,  usermod,  userdel,  groupadd,  groupmod,   
+groupdel,
+ 
+groups,
+ 
+id,
+ 
+whoami.
+ 
+ 
+Step  1  –  Create  and  verify  the  group   
+Commands  used:  sudo  groupadd  devteam,  getent  group  devteam.   
+The  devteam  group  was  already  present  from  the  initial  execution.  The  groupadd  command  reported  that  it  already   
+existed,
+ 
+and
+ 
+getent
+ 
+confirmed
+ 
+the
+ 
+group.
+ 
+
+ 
+Step  2  –  Create  the  user   
+Commands  used:  sudo  useradd  -m  -g  devteam  testuser1,  id  testuser1.   
+We  created  testuser1  with  a  home  directory  and  assigned  devteam  as  the  primary  group.  id  confirmed  the  user's  UID,  GID   
+and
+ 
+group
+ 
+membership.
+ 
+
+
+ 
+Step  3  –  Set  the  user  password   
+Commands  used:  sudo  passwd  testuser1.   
+We  assigned  a  password  to  testuser1.  The  password  command  completed  successfully  and  displayed  the  password-updated  
+confirmation.
+ 
+
+
+ 
+Step  4  –  Modify  the  user's  group  membership   
+Commands  used:  sudo  usermod  -aG  sudo  testuser1,  id  testuser1.   
+We  added  testuser1  to  the  sudo  group  as  a  secondary  group.  The  id  output  confirmed  membership  in  both  devteam  and   
+sudo.
+ 
+
+
+ 
+Step  5  –  Display  group  memberships   
+Commands  used:  groups  testuser1.   
+We  used  groups  to  display  the  groups  associated  with  testuser1.  The  output  confirmed  membership  in  devteam  and  sudo.
+
+
+ 
+Step  6  –  Display  the  current  user   
+Commands  used:  whoami.   
+We  used  whoami  to  display  the  username  of  the  current  terminal  session.  The  output  shows  the  currently  logged-in  user.
+
+
+ 
+Step  7  –  Delete  the  test  user  and  verify   
+Commands  used:  sudo  userdel  -r  testuser1,  id  testuser1.   
+We  removed  testuser1  and  its  home  directory  using  userdel  -r.  The  final  id  check  confirmed  that  the  user  no  longer  exists.
+
+
+ 

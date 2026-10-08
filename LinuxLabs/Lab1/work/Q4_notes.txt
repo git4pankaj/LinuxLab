@@ -1,0 +1,51 @@
+LINUX  LABORATORY
+ 
+Question  4
+ 
+Configure  file  permissions  and  ownership.  
+Step  1  –  Create  permission.txt  and  verify  the  file
+ 
+We  created  permission.txt  using  touch  and  used  ls  to  verify  that  the  file  was  created  successfully.  
+ 
+ 
+
+
+Step  2  –  View  the  initial  file  permissions
+ 
+We  used  ls  -l  to  display  the  initial  permissions,  owner,  group,  size  and  other  file  details  for  permission.txt.  
+ 
+ 
+
+
+Step  3  –  Change  permissions  to  755
+ 
+We  changed  the  permissions  of  permission.txt  to  755  using  chmod  and  then  verified  the  new  permissions  with  ls  -l.  
+ 
+ 
+
+
+Step  4  –  Change  permissions  to  644
+ 
+We  changed  the  permissions  back  to  644  using  chmod  and  verified  the  result  with  ls  -l.  
+ 
+ 
+
+
+Step  5  –  View  detailed  file  information
+ 
+We  used  stat  to  view  detailed  information  about  permission.txt,  including  its  permissions,  owner,  group,  size  and  timestamps.  
+ 
+ 
+
+
+Step  6  –  Change  file  ownership
+ 
+We  used  chown  to  set  the  owner  and  group  of  permission.txt  to  pankaj  and  then  used  ls  -l  to  verify  the  ownership.  
+ 
+ 
+
+
+Step  7  –  Verify  the  file  information  again
+ 
+We  ran  stat  again  to  verify  the  detailed  metadata  of  permission.txt  after  the  ownership  operation.  
+ 

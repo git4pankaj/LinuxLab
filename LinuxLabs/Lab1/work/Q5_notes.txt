@@ -1,0 +1,77 @@
+Question  5   
+Conﬁgure  ﬁle  permissions  &  ownership  (symbolic/numeric  chmod,  chown,  chgrp,  umask)  and  verify  with  ls  -l,   
+including
+ 
+recursive
+ 
+updates
+ 
+ 
+Step  1  –  Create  the  ProjectFiles  directory   
+Commands  used:  mkdir  ProjectFiles  &&  cd  ProjectFiles,  ls.   We  created  the  required  ProjectFiles  directory  and  entered  it.  ls  conﬁrmed  the  directory  was  empty  and  ready  for  the   
+sample
+ 
+ﬁles.
+ 
+ 
+
+
+Step  2  –  Create  the  sample  ﬁles   
+Commands  used:  touch  report.txt  script.sh  data.csv,  ls.   We  created  report.txt,  script.sh  and  data.csv  using  touch.  ls  conﬁrmed  that  all  three  ﬁles  were  present.
+ 
+Step  3  –  Apply  numeric  permission  644   
+Commands  used:  chmod  644  report.txt,  ls  -l  report.txt.   We  applied  numeric  permission  644  to  report.txt  and  veriﬁed  the  resulting  read/write  permissions  with  ls  -l.
+
+
+ 
+Step  4  –  Apply  symbolic  execute  permission   
+Commands  used:  chmod  +x  script.sh,  ls  -l  script.sh.   We  used  symbolic  chmod  to  add  execute  permission  to  script.sh  and  veriﬁed  the  resulting  permission  string.
+
+
+ 
+Step  5  –  Apply  numeric  permission  750   
+Commands  used:  chmod  750  data.csv,  ls  -l  data.csv.   We  applied  numeric  permission  750  to  data.csv.  The  listing  shows  -rwxr-x---,  which  veriﬁes  the  required  750  permission.
+
+
+ 
+Step  6  –  Apply  permissions  recursively   
+Commands  used:  chmod  -R  755  .,  ls  -l.   We  applied  755  recursively  to  the  current  ProjectFiles  directory  and  its  contents.  The  long  listing  conﬁrms  the  updated   
+permissions
+ 
+on
+ 
+the
+ 
+ﬁles.
+ 
+
+
+ 
+Step  7  –  Set  and  verify  the  default  umask   
+Commands  used:  umask  022,  umask.   We  set  the  default  creation  mask  to  022  and  then  used  umask  to  verify  that  the  active  mask  is  0022.
+
+
+ 
+Step  8  –  Change  ﬁle  ownership   
+Commands  used:  sudo  chown  $USER:$USER  report.txt,  ls  -l  report.txt.   We  changed  the  owning  user  and  group  of  report.txt  using  the  current  user  represented  by  $USER,  then  veriﬁed  the   
+ownership
+ 
+with
+ 
+ls
+ 
+-l.
+ 
+
+
+ 
+Step  9  –  Change  the  ﬁle  group   
+Commands  used:  sudo  chgrp  $USER  data.csv,  ls  -l  data.csv.   We  changed  the  owning  group  of  data.csv  using  $USER  and  veriﬁed  the  result  with  ls  -l.  
+
+
+ 
+Step  10  –  Verify  the  ﬁnal  permissions  and  ownership   
+Commands  used:  ls  -l.   We  displayed  the  ﬁnal  long  listing  of  the  ProjectFiles  directory  to  verify  the  permissions,  owner  and  group  of  all  three  ﬁles.
+
+
+ 

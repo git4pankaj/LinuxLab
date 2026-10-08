@@ -1,0 +1,99 @@
+LINUX  LABORATORY
+ 
+Question  2
+ 
+Demonstrate  pipes  &  redirection  (>,  >>,  <,  2>,  2>>,  2>&1,  |)  with  cat,  grep,  sort,  uniq,  wc,  tee  to  
+generate
+ 
+filtered
+ 
+reports.
+ 
+Step  1  –  Create  and  display  the  student  data
+ 
+We  created  students.txt  using  cat  and  entered  the  student  records.  The  file  contents  were  then  displayed  to  
+verify
+ 
+the
+ 
+data.
+ 
+ 
+ 
+
+
+Step  2  –  Redirect  standard  output  using  >
+ 
+The  >  operator  redirected  the  output  of  cat  into  report.txt.  The  report  file  was  then  displayed  to  verify  that  the  
+contents
+ 
+were
+ 
+written
+ 
+successfully.
+ 
+ 
+ 
+
+
+Step  3  –  Append  output  using  >>
+ 
+The  >>  operator  appended  new  text  to  the  existing  report.txt  file  without  overwriting  its  previous  contents.  The  file  was  displayed  again  to  verify  the  append  operation.  
+ 
+ 
+
+
+Step  4  –  Redirect  standard  input  using  <
+ 
+The  <  operator  supplied  students.txt  as  standard  input  to  wc.  This  demonstrated  input  redirection  and  counted  the  lines  in  the  file.  
+ 
+ 
+
+
+Step  5  –  Redirect  errors  using  2>  and  2>>
+ 
+The  2>  operator  redirected  an  error  message  into  a  file.  The  2>>  operator  is  the  append  form  of  error  redirection  and  is  included  with  this  step  as  requested.  
+ 
+ 
+
+
+Step  6  –  Combine  standard  output  and  standard  error  using  2>&1
+ 
+The  command  demonstrated  how  standard  output  and  standard  error  can  be  redirected  to  the  same  destination  using  2>&1.  The  resulting  file  was  then  displayed  for  verification.  
+ 
+ 
+
+
+Step  7  –  Filter  records  using  a  pipe  and  grep
+ 
+The  pipe  operator  |  passed  the  output  of  one  command  directly  to  grep.  grep  filtered  the  student  records  and  displayed  only  the  entries  containing  MCA.  
+ 
+ 
+
+
+Step  8  –  Sort  and  remove  duplicate  lines  using  sort  and  uniq
+ 
+The  output  was  passed  through  a  pipeline.  sort  arranged  the  records,  while  uniq  removed  duplicate  lines  from  the  sorted  result.  
+ 
+ 
+
+
+Step  9  –  Count  filtered  records  using  wc
+ 
+grep  first  selected  the  MCA  records,  and  the  pipe  passed  those  results  to  wc  -l.  This  demonstrated  counting  filtered  output.  
+ 
+ 
+
+
+Step  10  –  Save  filtered  output  using  tee
+ 
+The  tee  command  displayed  the  filtered  MCA  records  on  the  terminal  while  simultaneously  saving  the  same  output  into  a  report  file.  
+ 
+ 
+
+
+Step  11  –  Generate  the  final  filtered  report
+ 
+The  final  pipeline  combined  cat,  grep,  sort,  uniq,  the  pipe  operator  and  tee  to  generate  a  filtered  MCA  report.  The  saved  report  was  then  displayed  to  verify  the  result.  
+ 

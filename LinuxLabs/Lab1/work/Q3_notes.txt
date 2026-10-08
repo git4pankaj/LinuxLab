@@ -1,0 +1,87 @@
+Linux  System  and  Shell  Scripting  Lab  –  Lab  1
+ 
+Question  3
+ 
+Create  a  College  directory  hierarchy  with  subdirectories  (CSE,  ECE,  ME,  Civil),  nested  semester/subject  
+folders,
+ 
+and
+ 
+display
+ 
+it
+ 
+using
+ 
+tree,
+ 
+pwd,
+ 
+cd,
+ 
+mkdir,
+ 
+rmdir,
+ 
+ls.
+ 
+Step  1  –  Return  to  the  home  directory  and  verify  the  location
+ 
+We  returned  to  the  home  directory  using  cd  ~  and  used  pwd  to  verify  the  current  location.  
+ 
+ 
+
+
+Step  2  –  Create  the  College  directory
+ 
+We  created  the  College  directory  inside  Desktop  to  begin  the  required  directory  hierarchy.  
+ 
+ 
+
+
+Step  3  –  Verify  the  Desktop  contents
+ 
+We  used  ls  to  confirm  that  the  College  directory  was  created  along  with  the  existing  LabFiles  directory.  
+ 
+ 
+
+
+Step  4  –  Enter  the  College  directory
+ 
+We  used  cd  College/  to  enter  the  College  directory  and  continue  creating  its  structure.  
+ 
+ 
+
+
+Step  5  –  Create  the  department  directories
+ 
+We  created  the  four  department  directories:  CSE,  ECE,  ME  and  Civil.  The  directory  listing  confirmed  that  all  four  departments  were  created.  
+ 
+ 
+
+
+Step  6  –  Display  the  complete  department,  semester  and  subject  structure  using  tree
+ 
+We  used  tree  to  display  the  complete  College  hierarchy,  including  all  departments,  semesters  and  subject  folders.  
+ 
+ 
+
+
+Step  7  –  Enter  CSE/Sem1  and  verify  the  subjects
+ 
+We  entered  the  CSE/Sem1  directory  using  cd  and  used  ls  to  verify  that  Subject1  and  Subject2  were  present.  
+ 
+ 
+
+
+Step  8  –  Remove  an  empty  subject  directory  using  rmdir
+ 
+We  used  rmdir  to  remove  the  empty  College/Civil/Sem2/Subject2  directory  and  then  used  ls  to  confirm  that  only  Subject1  remained  in  Sem2.  
+ 
+ 
+
+
+Step  9  –  Display  the  recursive  directory  listing
+ 
+We  used  ls  -R  College  |  head  -20  to  display  the  first  20  lines  of  the  recursive  College  directory  listing.  
+ 
